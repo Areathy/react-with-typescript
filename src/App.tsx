@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
 
-  const [ number, setNumber ] = useState(5);
+  const [ number, setNumber ] = useState<number | string>(5);
 
   const changeNumber = () => {
     setNumber("19")
