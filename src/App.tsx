@@ -2,24 +2,22 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+interface State {
+  people: {
+    name: string
+    age: number
+    url: string
+    // The ? mark makes it optional
+    notes?: string
+  }
+}
+
 function App() {
 
-  const [people, setPeople] useState([
-    {
-      name: "Henrietha Njoku",
-      url: "henrietha.com",
-      age: "16",
-      note: "Allergic to failure"
-    },
-    {
-      name: "Timothy Fabelurin",
-      url: "henrietha.com",
-      age: "16",
-    }
-  ])
+  const [people, setPeople] = useState<State["people"]>([])
 
   people.map(person => {
-    person.name 
+    person.age
   })
 
   return (
